@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?8flwgj');
+  src: url('fonts/icomoon.eot?8flwgj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8flwgj') format('truetype'),
+    url('fonts/icomoon.woff?8flwgj') format('woff'),
+    url('fonts/icomoon.svg?8flwgj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: never; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mine_sweeper:before {
+  content: "\e900";
+}
+
+.icon-mzansi_directory:before {
+  content: "\e901";
+}
+
+.icon-personal_profile:before {
+  content: "\e902";
+}
+
+.icon-about_mih:before {
+  content: "\e903";
+}
+
+.icon-access_control:before {
+  content: "\e904";
+}
+
+.icon-business_profile:before {
+  content: "\e905";
+}
+
+.icon-business_setup:before {
+  content: "\e906";
+}
+
+.icon-calculator:before {
+  content: "\e907";
+}
+
+.icon-calendar:before {
+  content: "\e908";
+}
+
+.icon-i_dont_know:before {
+  content: "\e909";
+}
+
+.icon-mih_logo:before {
+  content: "\e90a";
+}
+
+.icon-mih_ring:before {
+  content: "\e90b";
+}
+
+.icon-mzansi_ai:before {
+  content: "\e90c";
+}
+
+.icon-mzansi_wallet:before {
+  content: "\e90d";
+}
+
+.icon-notifications:before {
+  content: "\e90e";
+}
+
+.icon-patient_manager:before {
+  content: "\e90f";
+}
+
+.icon-patient_profile:before {
+  content: "\e910";
+}
+
+.icon-profile_setup:before {
+  content: "\e911";
+}
