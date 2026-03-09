@@ -13,7 +13,7 @@ class ExamplePackage extends StatefulWidget {
 class _ExamplePackageState extends State<ExamplePackage> {
   int selectedbodyIndex = 0; // Important for state management of the body
   late final ToolBodyOne _toolBodyOne;
-  late final Widget _toolBodyTwo;
+  late final ToolBodyTwo _toolBodyTwo;
 
   @override
   void initState() {

@@ -32,14 +32,14 @@ class MihPackage extends StatefulWidget {
   /// The floating action button or primary action trigger for this package.
   final Widget packageActionButton;
 
+  /// The titles displayed in the header for each corresponding page.
+  final List<String> packageToolTitles;
+
   /// The toolbar widget containing icons that correspond to the [packageToolBodies] pages.
   final MihPackageTools packageTools;
 
   /// The list of main content widgets for each "page" of the package.
   final List<Widget> packageToolBodies;
-
-  /// The titles displayed in the header for each corresponding page.
-  final List<String> packageToolTitles;
 
   /// An optional drawer for secondary actions.
   final Drawer? actionDrawer;
