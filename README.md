@@ -46,7 +46,6 @@ class ExamplePackage extends StatefulWidget {
 }
 
 class _ExamplePackageState extends State<ExamplePackage> {
-  int selectedbodyIndex = 0; // Important for state management of the body
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +62,8 @@ class _ExamplePackageState extends State<ExamplePackage> {
       },
     );
   }
+
+  int selectedbodyIndex = 0; // Important for state management of the body
 
   Widget actionButton() {
     return MihPackageAction(
