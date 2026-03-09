@@ -1,33 +1,22 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
 # mih_package_toolkit
 
-A comprehensive UI toolkit and utility library specifically designed to help developers build **MIH Packages** for the MIH app ecosystem. 
+A comprehensive UI toolkit and utility library specifically designed to help developers build **MIH Packages** for the MIH Project ecosystem. 
 
-This toolkit provides a curated set of widgets, forms, and design utilities—ranging from custom buttons and input fields to complex layout components like floating menus and package windows.
-
----
+This toolkit provides a curated set of widgets, forms, and design utilities-ranging from custom buttons and input fields to complex layout components like floating menus and package windows.
 
 ## Features
 
 This toolkit provides everything you need to maintain visual and functional consistency within the MIH ecosystem:
 
-* **Form Elements**: Includes `MihForm`, `MihTextField`, `MihDateField`, and `MihDropdownField` for streamlined data entry.
-* **Navigation & Layout**: Complex structural components like `MihFloatingMenu`, `MihPackageWindow`, and `MihPackageToolBody`.
+* **Form Elements**: Includes `MihButton`, `MihForm`, `MihTextFormField`, `MihDateField`, `MihTimeField`, and `MihDropdownField`, `MihSearchBar`,  for streamlined data entry.
+* **Navigation & Layout**: Complex structural components like `MihPackage`, `MihPackageTitle`, `MihPackageAction`, `MihPackageTools`,  `MihPackageToolBody`, `MihPackageWindow`, `MihSingleChildScroll`, and `MihFloatingMenu`, .
 * **Feedback & Progress**: Pre-styled `MihSnackBar` and `MihLoadingCircle` for user interaction.
 * **Design Tokens**: Built-in access to `MihColors` and `MihIcons` to ensure brand compliance.
 * **Specialized Controls**: Widgets like `MihNumericStepper`, `MihRadioOptions`, and `MihToggle`.
+
+## Demo
+
+<img src='assets/mih_package_toolkit_demo.gif' height='300' alt='MIH Package Demo'>
 
 ## Getting started
 
@@ -127,10 +116,12 @@ For more details about MIH Package Toolkit, including usage instructions and upd
 ### Contributing
 Contributions are welcome! If you'd like to improve the package, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-### Reporting Issues 
-If you encounter any bugs or have feature requests, please file an issue on the [MIH Gitea Issues page](https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit/issues). Provide as much detail as possible to help us address the problem promptly.
+### Reporting Issues/ Feature Requests 
+If you encounter any bugs or have feature requests, please log an issue on the [MIH Gitea Issues page](https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit/issues). Provide as much detail as possible to help us address the problem promptly.
 
 ### Support and Response 
 We strive to respond to issues and pull requests in a timely manner. While this package is maintained voluntarily, we appreciate your patience and community involvement.
+
+If you would like to support the MIH development team directly, please feel free to contribute to the [MIH Project via DonaHub](https://donahub.co.za/campaigns/mih-project)
 
 Thank you for using the MIH Package Toolkit!
