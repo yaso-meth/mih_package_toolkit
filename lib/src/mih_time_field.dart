@@ -92,6 +92,7 @@ class _MihTimeFieldState extends State<MihTimeField> {
               minute: int.tryParse(widget.controller.text.split(":")[1]) ?? 0,
             )
           : TimeOfDay.now(),
+      initialEntryMode: TimePickerEntryMode.dial,
       builder: (context, child) {
         return Theme(
           data: Theme.of(context).copyWith(
@@ -108,21 +109,57 @@ class _MihTimeFieldState extends State<MihTimeField> {
                   MihColors.primary(darkMode: widget.darkMode),
             ),
             timePickerTheme: TimePickerThemeData(
+              helpTextStyle: TextStyle(
+                color: widget.secondayColor ??
+                    MihColors.secondary(darkMode: widget.darkMode),
+                fontSize: 12,
+                letterSpacing: 0.8,
+                fontWeight: FontWeight.w500,
+              ),
               // The main dialog background
               backgroundColor: widget.primaryColor ??
                   MihColors.primary(darkMode: widget.darkMode),
               // The background of the clock dial
-              dialBackgroundColor: widget.secondayColor ??
-                  MihColors.secondary(darkMode: widget.darkMode),
+              dialBackgroundColor: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+              dialTextColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.primaryColor ??
+                      MihColors.primary(
+                          darkMode: widget
+                              .darkMode); // number at selected position (inside the dot)
+                }
+                return widget.secondayColor ??
+                    MihColors.secondary(
+                        darkMode: widget.darkMode); // all other numbers
+              }),
               // The color of the clock hand
-              dialHandColor: widget.primaryColor ??
-                  MihColors.primary(darkMode: widget.darkMode),
-              // The background color of the hour/minute input boxes
-              hourMinuteColor: widget.secondayColor ??
+              dialHandColor: widget.secondayColor ??
                   MihColors.secondary(darkMode: widget.darkMode),
+              // The background color of the hour/minute input boxes
+              hourMinuteColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.secondayColor ??
+                      MihColors.secondary(
+                          darkMode: widget
+                              .darkMode); // lighter when selected (image 2 hour box)
+                }
+                return widget.primaryColor ??
+                    MihColors.primary(
+                        darkMode: widget
+                            .darkMode); // lighter when selected (image 2 hour box)
+              }),
               // The text color inside the hour/minute input boxes
-              hourMinuteTextColor: widget.primaryColor ??
-                  MihColors.primary(darkMode: widget.darkMode),
+              hourMinuteTextColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.primaryColor ??
+                      MihColors.primary(
+                          darkMode: widget
+                              .darkMode); // lighter when selected (image 2 hour box)
+                }
+                return widget.secondayColor ??
+                    MihColors.secondary(darkMode: widget.darkMode);
+              }),
               // The color of the keyboard/clock toggle icon
               entryModeIconColor: widget.secondayColor ??
                   MihColors.secondary(darkMode: widget.darkMode),

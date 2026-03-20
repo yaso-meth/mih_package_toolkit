@@ -110,6 +110,37 @@ class _ExamplePackageState extends State<ExamplePackage> {
 }
 ```
 
+---
+
+## Android Setup & Troubleshooting
+
+This package relies on **`local_auth`** and **`app_settings`**. Due to recent updates in these plugins, your Android project must meet specific SDK and NDK version requirements.
+
+### 1. Official Plugin Documentation
+If you encounter platform-specific issues (such as biometric permission errors), please refer to the official setup guides:
+
+*   [**local_auth (Android Integration)**](https://pub.dev/packages/local_auth#android-integration) — *Note: Requires `FlutterFragmentActivity` in your MainActivity.*
+*   [**app_settings (Documentation)**](https://pub.dev/packages/app_settings) — *Note: Required for opening system settings natively.*
+
+### 2. Required Build Configuration
+Update your `android/app/build.gradle.kts` (or `build.gradle`) to match the versions required by these plugins:
+
+```kotlin
+android {
+    // Required by the latest app_settings
+    compileSdk = 36 
+
+    // Required by local_auth & app_settings native dependencies
+    ndkVersion = "27.0.12077973"
+
+    defaultConfig {
+        // local_auth requires a minimum of SDK 21
+        minSdk = 21
+        ...
+    }
+}
+```
+
 ## Additional information
 
 For more details about MIH Package Toolkit, including usage instructions and updates, please visit the [MIH Gitea repository](https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit).

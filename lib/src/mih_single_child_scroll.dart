@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mih_package_toolkit/src/mih_colors.dart';
 
 /// A standardized scrollable container for the MIH Toolkit.
 ///
@@ -34,10 +35,18 @@ class MihSingleChildScroll extends StatefulWidget {
   /// Defaults to `false` if null. When enabled, it applies a
   /// [ScrollConfiguration] to the child subtree.
   final bool? scrollbarOn;
+
+  /// the color of scroll thumb when enabled wth [scrollbarOn]
+  final Color? scrollThumbColor;
+
+  /// The thinkness of scroll thumb when enabled with [scrollbarOn]
+  final double? scrollThumbThinkness;
   const MihSingleChildScroll({
     super.key,
     required this.child,
     this.scrollbarOn,
+    this.scrollThumbColor,
+    this.scrollThumbThinkness,
   });
 
   @override
@@ -50,11 +59,22 @@ class _MihSingleChildScrollState extends State<MihSingleChildScroll> {
     return SafeArea(
       bottom: false,
       minimum: EdgeInsets.only(bottom: 5),
-      child: ScrollConfiguration(
-        behavior: ScrollConfiguration.of(
-          context,
-        ).copyWith(scrollbars: widget.scrollbarOn ?? false),
-        child: SingleChildScrollView(child: widget.child),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          scrollbarTheme: ScrollbarThemeData(
+            thumbColor: WidgetStateProperty.all(widget.scrollThumbColor ??
+                MihColors.secondary()), // scrollbar color
+            thickness:
+                WidgetStateProperty.all(widget.scrollThumbThinkness ?? 10.0),
+            radius: Radius.circular(10),
+          ),
+        ),
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(
+            context,
+          ).copyWith(scrollbars: widget.scrollbarOn ?? false),
+          child: SingleChildScrollView(child: widget.child),
+        ),
       ),
     );
   }
