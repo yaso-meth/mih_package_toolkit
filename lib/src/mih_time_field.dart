@@ -28,6 +28,12 @@ import 'package:mih_package_toolkit/src/mih_colors.dart';
 /// )
 /// ```
 class MihTimeField extends StatefulWidget {
+  /// The primary color of the date picker
+  final Color? primaryColor;
+
+  /// The secondary color of the date picker
+  final Color? secondayColor;
+
   /// The controller that stores and displays the selected time string (HH:mm).
   final TextEditingController controller;
 
@@ -60,6 +66,8 @@ class MihTimeField extends StatefulWidget {
     required this.controller,
     required this.labelText,
     required this.required,
+    this.primaryColor,
+    this.secondayColor,
     this.width,
     this.height,
     this.borderRadius,
@@ -84,10 +92,95 @@ class _MihTimeFieldState extends State<MihTimeField> {
               minute: int.tryParse(widget.controller.text.split(":")[1]) ?? 0,
             )
           : TimeOfDay.now(),
+      initialEntryMode: TimePickerEntryMode.dial,
       builder: (context, child) {
-        return MediaQuery(
-          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
-          child: child as Widget,
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+              primary: widget.secondayColor ??
+                  MihColors.secondary(darkMode: widget.darkMode),
+              onPrimary: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+              surface: widget.secondayColor ??
+                  MihColors.secondary(darkMode: widget.darkMode),
+              onSurface: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+            ),
+            timePickerTheme: TimePickerThemeData(
+              helpTextStyle: TextStyle(
+                color: widget.secondayColor ??
+                    MihColors.secondary(darkMode: widget.darkMode),
+                fontSize: 12,
+                letterSpacing: 0.8,
+                fontWeight: FontWeight.w500,
+              ),
+              // The main dialog background
+              backgroundColor: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+              // The background of the clock dial
+              dialBackgroundColor: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+              dialTextColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.primaryColor ??
+                      MihColors.primary(
+                          darkMode: widget
+                              .darkMode); // number at selected position (inside the dot)
+                }
+                return widget.secondayColor ??
+                    MihColors.secondary(
+                        darkMode: widget.darkMode); // all other numbers
+              }),
+              // The color of the clock hand
+              dialHandColor: widget.secondayColor ??
+                  MihColors.secondary(darkMode: widget.darkMode),
+              // The background color of the hour/minute input boxes
+              hourMinuteColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.secondayColor ??
+                      MihColors.secondary(
+                          darkMode: widget
+                              .darkMode); // lighter when selected (image 2 hour box)
+                }
+                return widget.primaryColor ??
+                    MihColors.primary(
+                        darkMode: widget
+                            .darkMode); // lighter when selected (image 2 hour box)
+              }),
+              // The text color inside the hour/minute input boxes
+              hourMinuteTextColor: WidgetStateColor.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return widget.primaryColor ??
+                      MihColors.primary(
+                          darkMode: widget
+                              .darkMode); // lighter when selected (image 2 hour box)
+                }
+                return widget.secondayColor ??
+                    MihColors.secondary(darkMode: widget.darkMode);
+              }),
+              // The color of the keyboard/clock toggle icon
+              entryModeIconColor: widget.secondayColor ??
+                  MihColors.secondary(darkMode: widget.darkMode),
+              // Styles for AM/PM toggle (if not using 24h format)
+              dayPeriodColor: widget.secondayColor ??
+                  MihColors.secondary(darkMode: widget.darkMode),
+              dayPeriodTextColor: widget.primaryColor ??
+                  MihColors.primary(darkMode: widget.darkMode),
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                foregroundColor: widget.secondayColor ??
+                    MihColors.secondary(darkMode: widget.darkMode),
+              ),
+            ),
+          ),
+          // Wrap your MediaQuery inside the child of the Theme
+          child: MediaQuery(
+            data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+            child: child!,
+          ),
         );
       },
     );

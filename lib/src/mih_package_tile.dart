@@ -1,4 +1,6 @@
+import 'dart:io' show Platform;
 import 'package:app_settings/app_settings.dart';
+import 'package:flutter/foundation.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:mih_package_toolkit/src/mih_button.dart';
 import 'package:mih_package_toolkit/src/mih_colors.dart';
@@ -29,7 +31,9 @@ import 'package:mih_package_toolkit/src/mih_single_child_scroll.dart';
 class MihPackageTile extends StatefulWidget {
   /// The name of the package displayed below the icon.
   final String packageName;
+
   // final String? ytVideoID;
+  /// The icon of the package displayed above the name.
   final Widget packageIcon;
 
   /// The callback triggered when the tile is tapped.
@@ -40,7 +44,9 @@ class MihPackageTile extends StatefulWidget {
 
   /// The color of the [packageName] text.
   final Color textColor;
-  // final bool? authenticateUser;
+
+  /// Does the package require local auth check before opennings.
+  final bool? authenticateUser;
   const MihPackageTile({
     super.key,
     required this.onTap,
@@ -49,7 +55,7 @@ class MihPackageTile extends StatefulWidget {
     required this.packageIcon,
     required this.iconSize,
     required this.textColor,
-    // this.authenticateUser,
+    this.authenticateUser,
   });
 
   @override
@@ -95,7 +101,6 @@ class _MihPackageTileState extends State<MihPackageTile> {
         } else {
           authErrorPopUp();
         }
-        // print("Authenticated: $didBioAuth");
       } catch (error) {
         authErrorPopUp();
       }
@@ -212,17 +217,17 @@ class _MihPackageTileState extends State<MihPackageTile> {
   }
 
   Future<void> authenticateUser() async {
-    // if (widget.authenticateUser != null &&
-    //     widget.authenticateUser! &&
-    //     !kIsWeb &&
-    //     !Platform.isLinux) {
-    //   if (await isUserAuthenticated()) {
-    //     widget.onTap();
-    //   }
-    // } else {
-    //   widget.onTap();
-    // }
-    widget.onTap();
+    if (widget.authenticateUser != null &&
+        widget.authenticateUser! &&
+        !kIsWeb &&
+        !Platform.isLinux) {
+      if (await isUserAuthenticated()) {
+        widget.onTap();
+      }
+    } else {
+      widget.onTap();
+    }
+    // widget.onTap();
   }
 
   @override

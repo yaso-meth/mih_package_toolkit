@@ -14,6 +14,7 @@ class _ToolBodyOneState extends State<ToolBodyOne> {
     return MihPackageToolBody(
       backgroundColor: MihColors.primary(),
       bodyItem: MihSingleChildScroll(
+        scrollbarOn: true,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

@@ -16,24 +16,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: MihColors.primary(),
-        colorScheme: ColorScheme(
-          brightness: Brightness.dark,
-          primary: MihColors.secondary(),
-          onPrimary: MihColors.primary(),
-          secondary: MihColors.primary(),
-          onSecondary: MihColors.secondary(),
-          error: MihColors.red(),
-          onError: MihColors.primary(),
-          surface: MihColors.primary(),
-          onSurface: MihColors.secondary(),
-        ),
-      ),
-      home: const HomePage(),
-    );
+    return MaterialApp(title: 'Flutter Demo', home: const HomePage());
   }
 }
 
@@ -45,6 +28,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: MihPackageTile(
+          authenticateUser: true,
           onTap: () {
             Navigator.push(
               context,
@@ -52,9 +36,9 @@ class HomePage extends StatelessWidget {
             );
           },
           packageName: "Example Package",
-          packageIcon: Icon(MihIcons.mihLogo, color: MihColors.secondary()),
+          packageIcon: Icon(MihIcons.mihLogo, color: MihColors.primary()),
           iconSize: 150,
-          textColor: MihColors.secondary(),
+          textColor: MihColors.primary(),
         ),
       ),
     );

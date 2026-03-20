@@ -23,6 +23,9 @@ class MihPackageAction extends StatefulWidget {
   /// If null, the button will be disabled and appear greyed out.
   final void Function()? onTap;
 
+  /// The Color of the Icon
+  final Color iconColor;
+
   /// The size of the icon inside the button.
   final double iconSize;
 
@@ -32,6 +35,7 @@ class MihPackageAction extends StatefulWidget {
     super.key,
     required this.icon,
     required this.iconSize,
+    required this.iconColor,
     required this.onTap,
   });
 
@@ -57,6 +61,7 @@ class _MihPackageActionState extends State<MihPackageAction> {
       padding: const EdgeInsets.all(0),
       onPressed: widget.onTap,
       icon: widget.icon,
+      color: widget.iconColor,
     );
   }
 }

@@ -95,8 +95,7 @@ class _MihPackageToolBodyState extends State<MihPackageToolBody> {
         color: widget.backgroundColor,
         borderRadius: BorderRadius.circular(25.0),
         border: Border.all(
-          color:
-              widget.borderColor ??
+          color: widget.borderColor ??
               MihColors.secondary(darkMode: widget.darkMode),
           width: 3.0,
         ),
@@ -105,7 +104,7 @@ class _MihPackageToolBodyState extends State<MihPackageToolBody> {
       _innerBodyPadding = 0.0;
       return BoxDecoration(
         color: widget.backgroundColor,
-        borderRadius: BorderRadius.circular(25.0),
+        borderRadius: BorderRadius.circular(0),
         border: Border.all(color: widget.backgroundColor, width: 3.0),
       );
     }

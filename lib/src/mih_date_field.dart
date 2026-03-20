@@ -13,6 +13,12 @@ import 'package:mih_package_toolkit/src/mih_colors.dart';
 /// * Theme-aware styling that syncs with [MihColors].
 /// * Custom elevation and border radius.
 class MihDateField extends StatefulWidget {
+  /// The primary color of the date picker
+  final Color? primaryColor;
+
+  /// The secondary color of the date picker
+  final Color? secondayColor;
+
   /// The controller that handles the text being edited.
   ///
   /// The date will be stored in `YYYY-MM-DD` format.
@@ -50,6 +56,8 @@ class MihDateField extends StatefulWidget {
     required this.controller,
     required this.labelText,
     required this.required,
+    this.primaryColor,
+    this.secondayColor,
     this.width,
     this.height,
     this.borderRadius,
@@ -79,6 +87,36 @@ class _MihDateFieldState extends State<MihDateField> {
           : DateTime.now(),
       firstDate: DateTime(1900),
       lastDate: DateTime(2200),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: widget.primaryColor ?? MihColors.primary(),
+              primary: widget.secondayColor ??
+                  MihColors.secondary(), // Header & Selected Day
+              onPrimary: widget.primaryColor ??
+                  MihColors.primary(), // Text on top of primary
+              surface:
+                  widget.secondayColor ?? MihColors.secondary(), // Background
+              onSurface:
+                  widget.secondayColor ?? MihColors.secondary(), // Text/Dates
+            ),
+            datePickerTheme: DatePickerThemeData(
+              backgroundColor: widget.primaryColor ?? MihColors.primary(),
+              headerBackgroundColor:
+                  widget.secondayColor ?? MihColors.secondary(),
+              headerForegroundColor: widget.primaryColor ?? MihColors.primary(),
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                foregroundColor: widget.secondayColor ??
+                    MihColors.secondary(), // Action buttons (OK/Cancel)
+              ),
+            ),
+          ),
+          child: child!,
+        );
+      },
     );
     if (picked != null) {
       widget.controller.text = picked.toString().split(" ")[0];

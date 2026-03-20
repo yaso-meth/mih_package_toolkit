@@ -24,6 +24,7 @@ class _ToolBodyTwoState extends State<ToolBodyTwo> {
     return MihPackageToolBody(
       backgroundColor: MihColors.primary(),
       bodyItem: MihSingleChildScroll(
+        scrollbarOn: true,
         child: MihForm(
           formKey: _formKey,
           formFields: [

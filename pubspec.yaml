@@ -1,9 +1,17 @@
 name: mih_package_toolkit
 description: "A comprehensive UI toolkit and utility library for building consistent MIH Packages within the MIH Project ecosystem."
-version: 0.0.1
+version: 0.0.2
 homepage: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit
 repository: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit
 issue_tracker: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit/issues
+
+platforms:
+  android:
+  ios:
+  web:
+  linux:
+  macos:
+  windows:
 
 environment:
   sdk: ^3.0.0
@@ -26,4 +34,3 @@ flutter:
     - family: MihIcons
       fonts:
         - asset: lib/src/fonts/Mih_Icons.ttf
-

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2
+
+### Initial Release
+Usability and Bug Fixes
+* Add support for all platforms.
+* Remove ThemeDate dependancy on mih_package_toolkit widgets.
+* Add Color paramaters to `MihDateField`, `MihTimeField`, `MihPackage`, `MihPackageAction`, `MihPackageToolBody`, `MihPackageTools`.
+* Add Auth Check paramater to `MihPackageTile`.
+
 ## 0.0.1
 
 ### Initial Release
