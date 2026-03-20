@@ -192,7 +192,7 @@ class _MihPackageState extends State<MihPackage>
                           child: Text(
                             widget.packageToolTitles[_currentIndex],
                             style: TextStyle(
-                              color: widget.titleColor,
+                              color: widget.titleColor ?? MihColors.secondary(),
                               fontSize: 23,
                               fontWeight: FontWeight.w600,
                             ),
