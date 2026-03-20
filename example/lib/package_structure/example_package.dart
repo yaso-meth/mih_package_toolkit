@@ -25,6 +25,8 @@ class _ExamplePackageState extends State<ExamplePackage> {
   @override
   Widget build(BuildContext context) {
     return MihPackage(
+      backgroundColor: MihColors.primary(),
+      titleColor: MihColors.secondary(),
       packageActionButton: actionButton(),
       packageTools: tools(),
       packageToolBodies: toolBodies(),
@@ -40,6 +42,7 @@ class _ExamplePackageState extends State<ExamplePackage> {
 
   Widget actionButton() {
     return MihPackageAction(
+      iconColor: MihColors.secondary(),
       icon: Icon(Icons.arrow_back),
       iconSize: 35,
       onTap: () {
@@ -65,7 +68,12 @@ class _ExamplePackageState extends State<ExamplePackage> {
         selectedbodyIndex = 1;
       });
     };
-    return MihPackageTools(tools: temp, selectedIndex: selectedbodyIndex);
+    return MihPackageTools(
+      toolColor: MihColors.green(),
+      onSelectedIconColor: MihColors.primary(),
+      tools: temp,
+      selectedIndex: selectedbodyIndex,
+    );
   }
 
   List<Widget> toolBodies() {

@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:mih_package_toolkit/src/mih_colors.dart';
 import 'package:mih_package_toolkit/src/mih_package_tools.dart';
 
 /// The core container for MIH application modules.
@@ -29,6 +30,12 @@ import 'package:mih_package_toolkit/src/mih_package_tools.dart';
 /// )
 /// ```
 class MihPackage extends StatefulWidget {
+  /// The background  color of the package
+  final Color? backgroundColor;
+
+  /// The title  color of the package
+  final Color? titleColor;
+
   /// The floating action button or primary action trigger for this package.
   final Widget packageActionButton;
 
@@ -41,8 +48,8 @@ class MihPackage extends StatefulWidget {
   /// The list of main content widgets for each "page" of the package.
   final List<Widget> packageToolBodies;
 
-  /// An optional drawer for secondary actions.
-  final Drawer? actionDrawer;
+  /// An optional drawer for actions.
+  final Widget? actionDrawer;
 
   /// The initial page index to display.
   final int selectedBodyIndex;
@@ -51,6 +58,8 @@ class MihPackage extends StatefulWidget {
   final Function(int) onIndexChange;
   const MihPackage({
     super.key,
+    this.backgroundColor,
+    this.titleColor,
     required this.packageActionButton,
     required this.packageTools,
     required this.packageToolBodies,
@@ -155,6 +164,7 @@ class _MihPackageState extends State<MihPackage>
     return GestureDetector(
       onTap: unfocusAll,
       child: Scaffold(
+        backgroundColor: widget.backgroundColor ?? MihColors.primary(),
         drawer: widget.actionDrawer,
         body: SafeArea(
           bottom: false,
@@ -181,7 +191,8 @@ class _MihPackageState extends State<MihPackage>
                         child: FittedBox(
                           child: Text(
                             widget.packageToolTitles[_currentIndex],
-                            style: const TextStyle(
+                            style: TextStyle(
+                              color: widget.titleColor,
                               fontSize: 23,
                               fontWeight: FontWeight.w600,
                             ),

@@ -18,20 +18,20 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: MihColors.primary(),
-        colorScheme: ColorScheme(
-          brightness: Brightness.dark,
-          primary: MihColors.secondary(),
-          onPrimary: MihColors.primary(),
-          secondary: MihColors.primary(),
-          onSecondary: MihColors.secondary(),
-          error: MihColors.red(),
-          onError: MihColors.primary(),
-          surface: MihColors.primary(),
-          onSurface: MihColors.secondary(),
-        ),
-      ),
+      // theme: ThemeData(
+      //   scaffoldBackgroundColor: MihColors.primary(),
+      //   colorScheme: ColorScheme(
+      //     brightness: Brightness.dark,
+      //     primary: MihColors.secondary(),
+      //     onPrimary: MihColors.primary(),
+      //     secondary: MihColors.primary(),
+      //     onSecondary: MihColors.secondary(),
+      //     error: MihColors.red(),
+      //     onError: MihColors.primary(),
+      //     surface: MihColors.primary(),
+      //     onSurface: MihColors.secondary(),
+      //   ),
+      // ),
       home: const HomePage(),
     );
   }

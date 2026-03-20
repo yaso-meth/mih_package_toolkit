@@ -5,6 +5,14 @@ homepage: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit
 repository: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit
 issue_tracker: https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit/issues
 
+platforms:
+  android:
+  ios:
+  web:
+  linux:
+  macos:
+  windows:
+
 environment:
   sdk: ^3.0.0
   flutter: ">=3.0.0"
