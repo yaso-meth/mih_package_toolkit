@@ -2,9 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.3
+
+* Update Mih Color Red to a deeper red
+
 ## 0.0.2
 
-### Initial Release
 Usability and Bug Fixes
 * Add support for all platforms.
 * Remove ThemeDate dependancy on mih_package_toolkit widgets.

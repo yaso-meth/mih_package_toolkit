@@ -80,7 +80,7 @@ class MihColors {
   /// Semantic red color typically used for error states, warnings, or deletions.
   static Color red({bool? darkMode}) {
     if (darkMode == true || darkMode == null) {
-      return const Color(0xffD87E8B);
+      return const Color(0xffdb5368);
     } else {
       return const Color(0xffbb3d4f);
     }

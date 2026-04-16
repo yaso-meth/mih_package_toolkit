@@ -49,7 +49,7 @@ class _ExampleMihPackageState extends State<ExampleMihPackage> {
   Widget actionButton() {
     return MihPackageAction(
       iconColor: MihColors.secondary(),
-      icon: Icon(Icons.arrow_back),
+      icon: Icon(MihIcons.mihLogo),
       iconSize: 35,
       onTap: () {
         Navigator.pop(context);
@@ -86,15 +86,18 @@ class _ExampleMihPackageState extends State<ExampleMihPackage> {
     return [
       MihPackageToolBody(
         backgroundColor: MihColors.primary(),
-        bodyItem: Center(
-          child: Text(
-            "Tool Body One",
-            style: TextStyle(
-              color: MihColors.secondary(),
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+        bodyItem: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Tool Body One",
+              style: TextStyle(
+                color: MihColors.secondary(),
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
+          ],
         ),
       ),
       MihPackageToolBody(
