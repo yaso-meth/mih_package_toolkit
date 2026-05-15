@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.4
+
+* Add new icons to MihIcons.
+
 ## 0.0.3
 
-* Update Mih Color Red to a deeper red
+* Update Mih Color Red to a deeper red.
 
 ## 0.0.2
 
