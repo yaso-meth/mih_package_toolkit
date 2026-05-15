@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.5
+
+* Add new icons to MihIcons pt2.
+
 ## 0.0.4
 
 * Add new icons to MihIcons.

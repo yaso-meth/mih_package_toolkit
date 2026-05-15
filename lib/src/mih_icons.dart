@@ -28,7 +28,14 @@ class MihIcons {
   /// The package name where the font asset is located.
   static const String _mihFontPkg = 'mih_package_toolkit';
 
-  /// An icon representing MIH access controls.
+  /// An icon representing a hyperlink or external link.
+  static const IconData link = IconData(
+    0xe938,
+    fontFamily: _mihFontFam,
+    fontPackage: _mihFontPkg,
+  );
+
+  /// An icon representing MIH-specific access controls.
   static const IconData mihAccessControls = IconData(
     0xe926,
     fontFamily: _mihFontFam,
@@ -63,7 +70,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing a business.
+  /// An icon representing a generic business entity.
   static const IconData business = IconData(
     0xe903,
     fontFamily: _mihFontFam,
@@ -91,7 +98,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing a doctor.
+  /// An icon representing a doctor or medical professional.
   static const IconData doctor = IconData(
     0xe907,
     fontFamily: _mihFontFam,
@@ -105,14 +112,14 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing Git.
+  /// An icon representing Git/version control.
   static const IconData git = IconData(
     0xe909,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing an "I don't know" state.
+  /// An icon representing an "I don't know" or help state.
   static const IconData iDontKnow = IconData(
     0xe90a,
     fontFamily: _mihFontFam,
@@ -175,7 +182,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing a patient file.
+  /// An icon representing a patient file or record.
   static const IconData patientFile = IconData(
     0xe913,
     fontFamily: _mihFontFam,
@@ -252,14 +259,14 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing a user.
+  /// An icon representing a general user.
   static const IconData user = IconData(
     0xe91e,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing a wallet.
+  /// An icon representing a financial wallet.
   static const IconData wallet = IconData(
     0xe91f,
     fontFamily: _mihFontFam,
@@ -301,7 +308,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon for the "About MIH" section.
+  /// An icon representing the "About MIH" information section.
   static const IconData aboutMih = IconData(
     0xe925,
     fontFamily: _mihFontFam,
@@ -315,49 +322,49 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing business setup.
+  /// An icon representing the business setup process.
   static const IconData businessSetup = IconData(
     0xe928,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the MIH calculator.
+  /// An icon representing the MIH-specific calculator.
   static const IconData mihCalculator = IconData(
     0xe929,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the MIH calendar.
+  /// An icon representing the MIH-specific calendar.
   static const IconData mihCalendar = IconData(
     0xe92a,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the MIH "don't know" state.
+  /// An icon representing the MIH-specific "don't know" state.
   static const IconData mihIDontKnow = IconData(
     0xe92b,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the MIH logo.
+  /// An icon representing the MIH official logo.
   static const IconData mihLogo = IconData(
     0xe92c,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing MIH minesweeper.
+  /// An icon representing the MIH-specific minesweeper tool.
   static const IconData mihMinesweeper = IconData(
     0xe92d,
     fontFamily: _mihFontFam,
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the MIH ring branding.
+  /// An icon representing the MIH ring branding element.
   static const IconData mihRing = IconData(
     0xe92e,
     fontFamily: _mihFontFam,
@@ -371,7 +378,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the Mzansi Directory.
+  /// An icon representing the Mzansi Directory service.
   static const IconData mzansiDirectory = IconData(
     0xe930,
     fontFamily: _mihFontFam,
@@ -392,7 +399,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the patient manager tool.
+  /// An icon representing the patient manager system.
   static const IconData patientManager = IconData(
     0xe933,
     fontFamily: _mihFontFam,
@@ -413,7 +420,7 @@ class MihIcons {
     fontPackage: _mihFontPkg,
   );
 
-  /// An icon representing the profile setup process.
+  /// An icon representing the profile onboarding/setup process.
   static const IconData profileSetup = IconData(
     0xe936,
     fontFamily: _mihFontFam,
