@@ -16,7 +16,7 @@ This toolkit provides everything you need to maintain visual and functional cons
 
 ## Demo
 
-<img src='assets/mih_package_toolkit_demo.gif' height='300' alt='MIH Package Demo'>
+<img src='https://git.mzansi-innovation-hub.co.za/yaso_meth/mih_package_toolkit/raw/branch/main/assets/mih_package_toolkit_demo.gif' height='300' alt='MIH Package Demo'>
 
 ## Getting started
 
@@ -147,7 +147,7 @@ class _ExampleMihPackageState extends State<ExampleMihPackage> {
           ),
         ),
       ),
-    ];
+];
   }
 }
 ```
@@ -199,3 +199,41 @@ We strive to respond to issues and pull requests in a timely manner. While this 
 If you would like to support the MIH development team directly, please feel free to contribute to the [MIH Project via DonaHub](https://donahub.co.za/campaigns/mih-project)
 
 Thank you for using the MIH Package Toolkit!
+
+### Attributions
+| Icon | Link |
+| :--- | :--- |
+| access | https://www.flaticon.com/free-icon/access-control_7426564?term=user+access&page=1&position=19&origin=search&related_id=7426564 |
+| add business | https://www.flaticon.com/free-icon/business_13569850?term=company+add&page=1&position=25&origin=search&related_id=13569850 |
+| add user | https://www.flaticon.com/free-icon/add-user_748137?term=add+user&page=1&position=1&origin=search&related_id=748137 |
+| apple music | https://www.flaticon.com/free-icon/music_7566196?term=apple+music&related_id=7566196 |
+| business | https://www.flaticon.com/free-icon/contractor_11813336?term=company+profile&page=1&position=2&origin=search&related_id=11813336 |
+| calculator | https://www.flaticon.com/free-icon/calculator_2374409?term=calculator&page=1&position=20&origin=search&related_id=2374409 |
+| calendar | https://www.flaticon.com/free-icon/calendar_2278049?term=calendar&page=1&position=5&origin=search&related_id=2278049 |
+| discord | https://www.flaticon.com/free-icon/discord_5968898?term=discord&page=1&position=3&origin=search&related_id=5968898 |
+| doctor | https://www.flaticon.com/free-icon/doctor_10215061?term=doctor&page=1&position=73&origin=search&related_id=10215061 |
+| facebook | https://www.flaticon.com/free-icon/facebook_2175193?term=facebook&page=1&position=5&origin=search&related_id=2175193 |
+| git | https://www.flaticon.com/free-icon/social_15455742?term=git&page=1&position=4&origin=search&related_id=15455742 |
+| i dont know | https://www.flaticon.com/free-icon/i-dont-know_5359909?term=i+dont+know&page=1&position=7&origin=search&related_id=5359909 |
+| info | https://www.flaticon.com/free-icon/info_151776?term=about&page=1&position=8&origin=search&related_id=151776 |
+| instagram | https://www.flaticon.com/free-icon/instagram_1384031?term=instagram&page=1&position=5&origin=search&related_id=1384031 |
+| LinkedIn | https://www.flaticon.com/free-icon/linkedin_3536569?term=linkedin&page=1&position=2&origin=search&related_id=3536569 |
+| medium | https://www.flaticon.com/free-icon/medium_5968885?term=medium&page=1&position=7&origin=search&related_id=5968885 |
+| messenger | https://www.flaticon.com/free-icon/chat_9333888?term=messenger&page=1&position=8&origin=search&related_id=9333888 |
+| minesweeper | https://www.flaticon.com/free-icon/bomb_236454?term=bomb&page=1&position=25&origin=search&related_id=236454 |
+| patient file | https://www.flaticon.com/free-icon/patient_2376100?term=medication&page=1&position=6&origin=search&related_id=2376100 |
+| patient file | https://www.flaticon.com/free-icon/hospital_1233930?term=medical+snake&page=1&position=7&origin=search&related_id=1233930 |
+| pinterest | https://www.flaticon.com/free-icon/pinterest_733622?term=pinterest&page=1&position=6&origin=search&related_id=733622 |
+| reddit | https://www.flaticon.com/free-icon/reddit_3128263?term=reddit&page=1&position=5&origin=search&related_id=3128263 |
+| snapchat | https://www.flaticon.com/free-icon/snapchat_733627?term=snapchat&page=1&position=6&origin=search&related_id=733627 |
+| spotify | https://www.flaticon.com/free-icon/spotify-logo_87409?term=spotify&page=1&position=2&origin=search&related_id=87409 |
+| Threads | https://www.flaticon.com/free-icon/threads_12105336?term=threads&page=1&position=1&origin=search&related_id=12105336 |
+| TikTok | https://www.flaticon.com/free-icon/tik-tok_3046120?term=tiktok&page=1&position=1&origin=search&related_id=3046120 |
+| Twitch | https://www.flaticon.com/free-icon/twitch_5968952?term=twitch&page=1&position=7&origin=search&related_id=5968952 |
+| user | https://www.flaticon.com/free-icon/user_1077063?term=profile&page=1&position=6&origin=search&related_id=1077063 |
+| Wallet | https://www.flaticon.com/free-icon/wallet-passes-app_3884407?term=wallet&page=1&position=21&origin=search&related_id=3884407 |
+| weechat | https://www.flaticon.com/free-icon/wechat_732142?term=wechat&page=1&position=2&origin=search&related_id=732142 |
+| whatsapp | https://www.flaticon.com/free-icon/whatsapp_2111774?term=whatsapp&page=1&position=8&origin=search&related_id=2111774 |
+| x | https://www.flaticon.com/free-icon/twitter_5968958?term=x&page=1&position=5&origin=search&related_id=5968958 |
+| YouTube | https://www.flaticon.com/free-icon/youtube_152810?term=youtube&page=1&position=9&origin=search&related_id=152810 |
+| youtube music | https://www.flaticon.com/free-icon/music_15069232?term=youtube+music&page=1&position=4&origin=search&related_id=15069232 |
